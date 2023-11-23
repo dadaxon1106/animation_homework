@@ -1,3 +1,4 @@
+import 'package:animation_homework/pages/thirdpage/third_page.dart';
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatefulWidget {
@@ -145,10 +146,18 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin {
                     ScaleTransition(
                       scale: _animation,
                       child: TextButton(
-                        onPressed: () {
+                        onPressed: () async {
                           if (controller.isCompleted) {
-                            controller.reverse();
+                            await controller.reverse();
                           }
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const ThirdPage();
+                              },
+                            ),
+                          );
                         },
                         child: const Text(
                           "I want this",
