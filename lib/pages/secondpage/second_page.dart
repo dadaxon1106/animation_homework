@@ -17,7 +17,7 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin {
   void initState() {
     controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1200),
+      duration: const Duration(milliseconds: 1400),
     );
 
     _animation = Tween(begin: 0.0, end: 1.0).animate(controller);
@@ -80,7 +80,7 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin {
             ),
             ScaleTransition(
               scale: _animation,
-              alignment: Alignment.center,
+              alignment: Alignment.bottomCenter,
               child: Container(
                 height: 220,
                 width: 340,
