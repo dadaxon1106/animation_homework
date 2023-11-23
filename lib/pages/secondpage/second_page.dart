@@ -150,6 +150,7 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin {
                           if (controller.isCompleted) {
                             await controller.reverse();
                           }
+                          // ignore: use_build_context_synchronously
                           Navigator.push(
                             context,
                             MaterialPageRoute(
