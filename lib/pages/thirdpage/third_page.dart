@@ -27,7 +27,7 @@ class _ThirdPageState extends State<ThirdPage> with TickerProviderStateMixin {
     );
     controller3 = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 1),
     );
     _animation = Tween(begin: 0.0, end: 1.0).animate(controller);
     _animation2 = Tween(begin: 0.0, end: 1.0).animate(controller2);
@@ -43,7 +43,7 @@ class _ThirdPageState extends State<ThirdPage> with TickerProviderStateMixin {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(top: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             // crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,11 +67,11 @@ class _ThirdPageState extends State<ThirdPage> with TickerProviderStateMixin {
                 scale: _animation,
                 child: FadeTransition(
                   opacity: _animation,
-                  child: Image.asset("assets/images/photo_second.jpg"),
+                  child: Image.asset("assets/images/second_image.png"),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(1),
+                padding: const EdgeInsets.only(top: 10),
                 child: ScaleTransition(
                   scale: _animation3,
                   child: FadeTransition(
@@ -93,7 +93,7 @@ class _ThirdPageState extends State<ThirdPage> with TickerProviderStateMixin {
                 child: FadeTransition(
                   opacity: _animation2,
                   child: const Padding(
-                    padding: EdgeInsets.only(bottom: 40),
+                    padding: EdgeInsets.only(bottom: 40, left: 10),
                     child: Text(
                       "welcome Lorenzo now\n you are a nabanker",
                       // textAlign: TextAlign.center,

@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
               SlideTransition(
                 position: Tween(
-                  begin: const Offset(-2, -2),
+                  begin: const Offset(2, -2),
                   end: const Offset(0, 0),
                 ).animate(controller),
                 child: const Text(
